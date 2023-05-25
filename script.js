@@ -78,3 +78,22 @@ const typed = new Typed('.muda-text', {
     backDelay: 4000,
     loop: true
 });
+
+// Slider About 
+
+
+let count = 1;
+document.getElementById("radio1").checked = true;
+
+setInterval( function(){
+ nextImage();
+}, 6000)
+
+function nextImage(){
+    count++;
+    if(count>4){ // se maior que 4 volta pra primeira imagem 
+        count =1;
+    }
+
+    document.getElementById("radio"+count).checked = true;
+}
